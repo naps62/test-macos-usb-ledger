@@ -1,0 +1,37 @@
+[package]
+name = "test-macos-usb"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.33", features = ["full", "sync"] }
+ethers = { features = [
+  "ws",
+  "ledger",
+], git = "https://github.com/gakonst/ethers-rs", rev = "841ff8c47980798fbb47991e047f8481b1d5eb39" }
+
+
+[patch.crates-io]
+ethers = { git = "https://github.com/gakonst/ethers-rs", rev = "841ff8c47980798fbb47991e047f8481b1d5eb39" }
+ethers-addressbook = { git = "https://github.com/gakonst/ethers-rs", rev = "841ff8c47980798fbb47991e047f8481b1d5eb39" }
+ethers-core = { git = "https://github.com/gakonst/ethers-rs", rev = "841ff8c47980798fbb47991e047f8481b1d5eb39" }
+ethers-contract = { git = "https://github.com/gakonst/ethers-rs", rev = "841ff8c47980798fbb47991e047f8481b1d5eb39" }
+ethers-contract-abigen = { git = "https://github.com/gakonst/ethers-rs", rev = "841ff8c47980798fbb47991e047f8481b1d5eb39" }
+ethers-providers = { git = "https://github.com/gakonst/ethers-rs", rev = "841ff8c47980798fbb47991e047f8481b1d5eb39" }
+ethers-signers = { git = "https://github.com/gakonst/ethers-rs", rev = "841ff8c47980798fbb47991e047f8481b1d5eb39" }
+ethers-middleware = { git = "https://github.com/gakonst/ethers-rs", rev = "841ff8c47980798fbb47991e047f8481b1d5eb39" }
+ethers-etherscan = { git = "https://github.com/gakonst/ethers-rs", rev = "841ff8c47980798fbb47991e047f8481b1d5eb39" }
+ethers-solc = { git = "https://github.com/gakonst/ethers-rs", rev = "841ff8c47980798fbb47991e047f8481b1d5eb39" }
+
+foundry-compilers = { git = "https://github.com/foundry-rs/compilers" }
+foundry-block-explorers = { git = "https://github.com/foundry-rs/block-explorers" }
+
+alloy-dyn-abi = { git = "https://github.com/alloy-rs/core/" }
+alloy-primitives = { git = "https://github.com/alloy-rs/core/" }
+alloy-json-abi = { git = "https://github.com/alloy-rs/core/" }
+alloy-sol-types = { git = "https://github.com/alloy-rs/core/" }
+
+# https://github.com/summa-tx/coins/issues/124
+coins-ledger = { git = "https://github.com/iron-wallet/coins", branch = "send" }

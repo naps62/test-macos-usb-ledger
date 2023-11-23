@@ -12,6 +12,22 @@ ethers = { features = [
   "ledger",
 ], git = "https://github.com/gakonst/ethers-rs", rev = "841ff8c47980798fbb47991e047f8481b1d5eb39" }
 
+foundry-config = { git = "https://github.com/foundry-rs/foundry", rev = "nightly-6b72a8cabf247eb62fc432401264bc5cff0228a0" }
+foundry-evm = { git = "https://github.com/foundry-rs/foundry", rev = "nightly-6b72a8cabf247eb62fc432401264bc5cff0228a0" }
+foundry-utils = { git = "https://github.com/foundry-rs/foundry", rev = "nightly-6b72a8cabf247eb62fc432401264bc5cff0228a0" }
+
+
+eyre = "*"
+
+revm = { version = "3", default-features = false, features = [
+  "std",
+  "serde",
+  "memory_limit",
+  "optional_eip3607",
+  "optional_block_gas_limit",
+  "optional_no_base_fee",
+] }
+
 
 [patch.crates-io]
 ethers = { git = "https://github.com/gakonst/ethers-rs", rev = "841ff8c47980798fbb47991e047f8481b1d5eb39" }

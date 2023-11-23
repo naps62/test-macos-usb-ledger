@@ -23,4 +23,4 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          command: target/debug/test-macos-usb
+          path: target/debug/test-macos-usb

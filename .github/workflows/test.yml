@@ -1,0 +1,27 @@
+name: rust
+
+on:
+  push:
+    branches:
+      - "*"
+
+jobs:
+  runs-on: macos-latest
+  cargo-clippy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+          components: rustfmt, clippy
+
+      - uses: actions-rs/cargo@v1
+        with:
+          command: build
+
+      - uses: actions/upload-artifact@v3
+        with:
+          command: target/debug/test-macos-usb

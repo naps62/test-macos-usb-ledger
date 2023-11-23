@@ -384,7 +384,8 @@ dependencies = [
 [[package]]
 name = "coins-ledger"
 version = "0.8.7"
-source = "git+https://github.com/iron-wallet/coins?branch=send#a6c1f0b539ab7d0833b4375c8a298d760d5275fb"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8fa6094030951ce3efad50fdba0efe088a93ffe05ec58c2f47cc60d9e90c715d"
 dependencies = [
  "async-trait",
  "byteorder",
@@ -981,7 +982,6 @@ dependencies = [
  "const-hex",
  "enr",
  "ethers-core",
- "futures-channel",
  "futures-core",
  "futures-timer",
  "futures-util",

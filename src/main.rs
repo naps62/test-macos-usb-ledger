@@ -1,5 +1,5 @@
-#[cfg(feature = "linux-static-rusb")]
-extern crate rusb;
+// #[cfg(feature = "linux-static-rusb")]
+// extern crate rusb;
 
 extern crate libc;
 

@@ -1,5 +1,5 @@
 mod hidapi_rusb;
 
 fn main() {
-    hidapi_rusb::HidApi::new().unwrap();
+    hidapi_rusb::HidApiLock::acquire().unwrap();
 }

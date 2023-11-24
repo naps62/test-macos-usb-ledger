@@ -6,7 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [features]
-default = []
+default = ["linux-static-rusb"]
 linux-static-libusb = []
 linux-static-hidraw = []
 linux-static-rusb = ["rusb"]

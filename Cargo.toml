@@ -7,6 +7,10 @@ edition = "2021"
 
 [dependencies]
 tokio = { version = "1.33", features = ["full", "sync"] }
-ethers-signers = { features = [
-  "ledger",
-], git = "https://github.com/gakonst/ethers-rs", rev = "841ff8c47980798fbb47991e047f8481b1d5eb39" }
+# ethers-signers = { features = [
+#   "ledger",
+# ], git = "https://github.com/gakonst/ethers-rs", rev = "841ff8c47980798fbb47991e047f8481b1d5eb39" }
+coins-ledger = { version = "0.8.3", default-features = false }
+futures-executor = "0.3.29"
+hex = "0.4.3"
+anyhow = "1.0.75"

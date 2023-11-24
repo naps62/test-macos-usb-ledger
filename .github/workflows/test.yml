@@ -24,7 +24,7 @@ jobs:
         with:
           command: build
 
-      - run: otool -L target/debug/test-macos-usb | grep ulibusb
+      - run: otool -L target/debug/test-macos-usb | grep libusb
 
       - uses: actions/upload-artifact@v3
         with:

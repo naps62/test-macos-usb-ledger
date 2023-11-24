@@ -42,6 +42,8 @@ fn main() {
 }
 
 fn compile_linux() {
+    println!("cargo:warning=compile-linux");
+
     // First check the features enabled for the crate.
     // Only one linux backend should be enabled at a time.
 
@@ -185,6 +187,8 @@ fn compile_windows() {
 }
 
 fn compile_macos() {
+    println!("cargo:warning=compile-macos");
+
     cc::Build::new()
         .file("etc/hidapi/mac/hid.c")
         .include("etc/hidapi/hidapi")

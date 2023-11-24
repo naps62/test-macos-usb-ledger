@@ -24,6 +24,8 @@ jobs:
         with:
           command: build
 
+      - run: otool -L target/debug/test-macos-usb
+
       - uses: actions/upload-artifact@v3
         with:
           path: target/debug/test-macos-usb

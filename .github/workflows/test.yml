@@ -26,7 +26,7 @@ jobs:
         with:
           command: build
         env:
-          RUSTFLAGS="--print link-args"
+          RUSTFLAGS: "--print link-args"
 
       - run: otool -L target/debug/test-macos-usb | grep libusb
 

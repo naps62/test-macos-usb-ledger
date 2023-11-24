@@ -1,7 +1,12 @@
-mod hidapi_rusb;
+#[cfg(feature = "linux-static-rusb")]
+extern crate rusb;
+
+extern crate libc;
+
+mod ffi;
 
 fn main() {
     unsafe {
-        hidapi_rusb::ffi::hid_init();
+        ffi::hid_init();
     }
 }

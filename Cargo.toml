@@ -12,4 +12,4 @@ ethers-signers = { features = [
 ], git = "https://github.com/gakonst/ethers-rs", rev = "841ff8c47980798fbb47991e047f8481b1d5eb39" }
 
 [patch.crates-io]
-hidapi-rusb = { git = "https://github.com/naps62/hidapi-rs", branch = "libusb-macos" }
+hidapi-rusb = { git = "https://github.com/joshieDo/hidapi-rs", rev = "8f7bb8b" }

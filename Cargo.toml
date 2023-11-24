@@ -14,3 +14,6 @@ coins-ledger = { version = "0.8.3", default-features = false }
 futures-executor = "0.3.29"
 hex = "0.4.3"
 anyhow = "1.0.75"
+
+[patch.crates-io]
+hidapi-rusb = { git = "https://github.com/naps62/hidapi-rs", branch = "libusb-macos" }

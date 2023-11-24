@@ -1,10 +1,14 @@
-use coins_ledger::transports::LedgerAsync;
+// use crate::{
+//     common::{APDUAnswer, APDUCommand},
+//     errors::LedgerError,
+//     transports::hid,
+
+// };
+mod hid;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    coins_ledger::transports::Ledger::init()
-        .await
-        .expect("can't init ledger");
+    hid::TransportNativeHID::new();
 
     Ok(())
 }

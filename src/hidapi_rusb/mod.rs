@@ -7,7 +7,7 @@ extern crate rusb;
 extern crate libc;
 
 mod error;
-mod ffi;
+pub mod ffi;
 
 use std::sync::atomic::{AtomicBool, Ordering};
 
@@ -38,15 +38,6 @@ impl HidApiLock {
         } else {
             Err(HidError::InitializationError)
         }
-    }
-}
-
-impl Drop for HidApiLock {
-    fn drop(&mut self) {
-        unsafe {
-            ffi::hid_exit();
-        }
-        HID_API_LOCK.store(false, Ordering::SeqCst);
     }
 }
 

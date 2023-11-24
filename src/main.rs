@@ -1,5 +1,7 @@
 mod hidapi_rusb;
 
 fn main() {
-    hidapi_rusb::HidApiLock::acquire().unwrap();
+    unsafe {
+        hidapi_rusb::ffi::hid_init();
+    }
 }

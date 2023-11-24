@@ -1,6 +1,6 @@
 #[tokio::main]
 async fn main() {
-    let ledger = ethers::signers::Ledger::new(ethers::signers::HDPath::LedgerLive(0), 1).await;
+    let ledger = ethers_signers::Ledger::new(ethers_signers::HDPath::LedgerLive(0), 1).await;
 
     dbg!(&ledger);
 }

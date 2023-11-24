@@ -7,6 +7,6 @@ edition = "2021"
 
 [dependencies]
 tokio = { version = "1.33", features = ["full", "sync"] }
-ethers = { features = [
+ethers-signers = { features = [
   "ledger",
 ], git = "https://github.com/gakonst/ethers-rs", rev = "841ff8c47980798fbb47991e047f8481b1d5eb39" }

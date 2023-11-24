@@ -20,6 +20,9 @@ jobs:
 
       - uses: Swatinem/rust-cache@v2
 
+      - run: rm -rf /usr/local/Cellar/libusb
+      - run: env
+
       - uses: actions-rs/cargo@v1
         with:
           command: build

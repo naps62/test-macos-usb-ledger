@@ -26,6 +26,8 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           command: build
+        env:
+          RUSTFLAGS="--print link-args"
 
       - run: otool -L target/debug/test-macos-usb | grep libusb
 

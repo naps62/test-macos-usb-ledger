@@ -25,6 +25,7 @@ use std::env;
 fn main() {
     let target = env::var("TARGET").unwrap();
 
+    println!("cargo:warning=target={}", target);
     if target.contains("linux") {
         compile_linux();
     } else if target.contains("windows") {

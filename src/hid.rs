@@ -56,13 +56,13 @@ impl HidApiWrapper {
 
 impl TransportNativeHID {
     #[cfg(not(target_os = "linux"))]
-    fn find_ledger_device_path(api: &hidapi_rusb::HidApi) -> Result<CString, NativeTransportError> {
+    fn find_ledger_device_path(api: &hidapi_rusb::HidApi) -> anyhow::Result<CString> {
         for device in api.device_list() {
             if device.vendor_id() == LEDGER_VID && device.usage_page() == LEDGER_USAGE_PAGE {
                 return Ok(device.path().into());
             }
         }
-        Err(NativeTransportError::DeviceNotFound)
+        Err(anyhow::anyhow!("NativeTransportError::DeviceNotFound"))
     }
 
     #[cfg(target_os = "linux")]

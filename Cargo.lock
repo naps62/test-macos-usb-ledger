@@ -547,7 +547,6 @@ name = "test-macos-usb"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "byteorder",
  "coins-ledger",
  "hidapi-rusb",
  "lazy_static",

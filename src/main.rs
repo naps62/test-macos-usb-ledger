@@ -3,10 +3,15 @@ extern crate rusb;
 
 extern crate libc;
 
-mod ffi;
+use libc::c_int;
+
+#[allow(dead_code)]
+extern "C" {
+    pub fn hid_init() -> c_int;
+}
 
 fn main() {
     unsafe {
-        ffi::hid_init();
+        hid_init();
     }
 }
